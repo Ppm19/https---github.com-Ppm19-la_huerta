@@ -1,0 +1,17 @@
+[
+    {
+        "nombre": "patata",
+        "tiempo_regado": 35,
+        "tiempo_recoleccion": 200
+    },
+    {
+        "nombre": "melon",
+        "tiempo_regado": 90,
+        "tiempo_recoleccion": 600
+    },
+    {
+        "nombre": "chirivia",
+        "tiempo_regado": 20,
+        "tiempo_recoleccion": 150
+    }
+]
