@@ -2,6 +2,7 @@
 
 const readline = require("readline");
 const rl = readline.createInterface(process.stdin, process.stdout);
+const semillas = require('./cultivos.json');
 const { exit } = require("process");
 
 function leeLinea(texto) {
@@ -15,6 +16,7 @@ function leeLinea(texto) {
 async function menu(){
 
     console.log("|=================================|")
+    console.log("|                                 |")
     console.log("|              Menú               |")
     console.log("|                                 |")
     console.log("|1.Plantar Cultivo                |")
@@ -29,6 +31,7 @@ async function menu(){
     let opcion = await leeLinea("\nSelecciona una opción: ")
     switch(opcion){
         case "1":
+            plantarCultivo();
             break;
         case "2":
             break;
@@ -44,8 +47,19 @@ async function menu(){
             exit();
         default:
             console.log("Opción no valida, introduce un número del 1 al 7")
-            let enter = await leeLinea("Pulsa enter para continuar")
+            let enter = await leeLinea("Pulsa enter para continuar\n")
             return menu()
+    }
+
+    function plantarCultivo(lista){
+        let semillas = {};
+        let id = 0;
+
+        for(let semilla of semillas){
+            for(let i=0 ; i<lista.length;i++){
+                semillas.push(semilla)
+            }
+        }
     }
 }
 
